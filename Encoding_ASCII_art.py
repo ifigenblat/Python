@@ -10,8 +10,6 @@ and return a list of tuples: [(A:5),(B:4),(A:3)]
 then add a corresponding function decodeString that will taje in a list of tuples and
 print the original string.
 '''
-
-
 def encodeString(stringVal):
     counter = 0
     temp = ''
@@ -48,7 +46,34 @@ def decodeString(encodedList):
     return stringDecod
     pass
 
+#Another solution
+def encodeString2(stringVal):
+    encodeList = []
+    prevChar = stringVal[0]
+    count = 0
+    for char in stringVal:
+        if prevChar != char:
+            encodeList.append((prevChar,count))
+            count = 0
+        prevChar = char 
+        count = count + 1
+    encodeList.append((prevChar, count))
+    return encodeList
+
+def decodeString2(encodeList):
+    decodedStr = ''
+    for item in encodeList:
+        decodedStr = decodedStr + item[0] * item[1]
+    return decodedStr
+
+
+
 list = encodeString('AAAAABBBBAAA')
 print(list)
 decoded = decodeString(list)
+print(decoded)
+
+list = encodeString2('AAAAABBBBAAA')
+print(list)
+decoded = decodeString2(list)
 print(decoded)

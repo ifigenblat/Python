@@ -52,6 +52,10 @@ names = ["john", "mary", "tim"]
 for name in names:
 	print(name)
 
+myList = [1,2,3,4]
+for item in myList:
+	print(item)
+
 # iteriate through carcters 
 name = "John Smith"
 for x in name:
@@ -81,3 +85,14 @@ for number in numbers:
         pass  # Skip even numbers
     else:
         print(f"Odd number: {number}")
+
+
+'''
+Finding prime number using For/Else
+'''
+for number in range(2,100):
+	for factor in range(2, int(number **0.5)+1):
+		if number % factor == 0:
+			break
+	else:
+		print(f'{number} is prime!')
