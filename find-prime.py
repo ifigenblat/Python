@@ -55,5 +55,5 @@ def allPrimesUpTo2(num):
     return my_list
 
 
-print(f'{allPrimesUpTo(100)}')
-print(f'{allPrimesUpTo2(100)}')
+print(allPrimesUpTo(100))
+print(allPrimesUpTo2(100))
