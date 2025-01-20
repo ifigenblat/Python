@@ -14,17 +14,3 @@ for number in range (1,101):
 	else:
 		print(number)
 
-
-# less line of code
-for number in range (1,101):
-	print(f"{number} FizzBuzz!" if number % 3 == 0 and number % 5 == 0 else
-          f"{number} Fizz" if number % 3 == 0 else
-          f"{number} Buzz" if number % 5 == 0 else
-          number)
-
-
-for number in range(1, 101):
-    print(f"{number} FizzBuzz!" if number % 15 == 0 else
-          "Fizz" if number % 3 == 0 else
-          "Buzz" if number % 5 == 0 else
-          number)

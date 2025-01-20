@@ -1,3 +1,7 @@
+# pass: Does nothing and continues to the next statement.
+# continue: Skips the current iteration of a loop and proceeds to the next iteration.
+# break: Exits the loop entirely.
+
 from datetime import datetime
 
 print(datetime.now().second)
@@ -9,10 +13,6 @@ wait_until = (datetime.now().second + 2) % 60
 while datetime.now().second != wait_until:
 	pass
 print (f'we are at {wait_until} seconds!')
-
-#pass - 
-#break - break the loop
-#continue - skip the line that follow it.
 
 wait_until = (datetime.now().second + 2) % 60
 

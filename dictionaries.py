@@ -100,4 +100,4 @@ favorite_pizza = {
 for x,y in favorite_pizza.items():
 	print(f"Key:{x} Value:{y}") 
 
-print(f"Printing favorite_pizza.items: {favorite_pizza.items()}")
+print(f"Printing favorite_pizza.items: {favorite_pizza.size()}")

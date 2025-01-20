@@ -43,3 +43,4 @@ processingFunctions = [lowercase, removePunctuation, removeNewlines]
 for func in processingFunctions:
 	text = func(text)
 print(text)
+

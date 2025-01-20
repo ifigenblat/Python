@@ -17,6 +17,6 @@ name = input("What's your name ")
 name = name.lower()
 print(f"Hi there {name}")
 
-# Only len() don't slap at the end of the variable
+# Only len() don't slap at the end of the variable 
 name = input("What's your name ")
 print(f'The name {name} has {len(name)} characters')

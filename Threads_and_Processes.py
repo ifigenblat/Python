@@ -21,7 +21,7 @@ t1.join()
 t2.join()
 
 print(results)
-print(f'Two threads took {time.time() - start} drconds to execute')
+print(f'Two threads took {time.time() - start} seconds to execute')
 
 '''
 It's a common pattern to put all these in a list
@@ -50,4 +50,4 @@ threads = [threading.Thread(target=longSqure, args=(n,results)) for n in range(0
 [t.join() for t in threads]
 
 print(results)
-print(f'Multi threads took {time.time() - start} drconds to execute')
+print(f'Multi threads took {time.time() - start} seconds to execute')

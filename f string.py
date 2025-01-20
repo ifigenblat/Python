@@ -2,6 +2,7 @@
 f‐string allows us to execute code inside of a string…right there between the
 brackets:
 {....}
+fʺstring stuff here {code stuff here}ʺ
 '''
 print(f"3 + 2 = {3 + 2}")
 print(f"5 – 1 = {5 - 1}")
