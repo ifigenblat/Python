@@ -1,0 +1,12 @@
+services:
+  gitea:
+    build: .
+    ports: 
+      - "3000:3000"
+  database:
+    image: "mysql:latest"
+    environment:
+      - MYSQL_ROOT_PASSWORD=gitea
+      - MYSQL_USER=gitea
+      - MYSQL_PASSWORD=gitea
+      - MYSQL_DATABASE=gitea
