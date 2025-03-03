@@ -12,12 +12,12 @@ class User(BaseModel):
 	name: str
 
 # Get all users
-@app.get("/users")
+@app.get("/user")
 def get_users():
 	return users 
 
 # Add a new user
-@app.post("/users")
+@app.post("/user")
 def add_user(user: User):
 	users.append(user.dict())
 	return user 

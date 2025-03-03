@@ -1,7 +1,7 @@
 import psycopg2
 from psycopg2 import sql, OperationalError, DatabaseError
 
-def connect(db_name = 'company_db', db_user = 'postgres', db_password = 'Magic8ball'):
+def connect(db_name = 'company_db', db_user = 'ifigenblat', db_password = 'Magic8ball'):
 	try:
 		return psycopg2.connect(
 			database=db_name,
@@ -16,7 +16,7 @@ def connect(db_name = 'company_db', db_user = 'postgres', db_password = 'Magic8b
 # Database connection parameters
 DB_CONFIG = {
     "dbname": "company_db",
-    "user": "postgres",
+    "user": "ifigenblat",
     "password": "Magic8ball",
     "host": "localhost",
     "port": "5432"

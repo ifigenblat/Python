@@ -36,6 +36,16 @@ VALUES
 ('Henry', 'Morris', 'henry.morris@example.com', 95000.00, 4, '2018-12-11', '666-777-8888'),
 ('Ivy', 'Wilson', 'ivy.wilson@example.com', 60000.00, 2, '2020-06-17', '111-000-9999');
 
+-- Step 3: Create the sales table within the hr schema
+CREATE TABLE hr.employees (
+    employee_id SERIAL PRIMARY KEY,  -- Auto-incrementing primary key
+    first_name VARCHAR(50) NOT NULL, -- First name column
+    last_name VARCHAR(50) NOT NULL,  -- Last name column
+    email VARCHAR(100) UNIQUE,       -- Unique email column
+    salary NUMERIC(10,2),            -- Salary with precision
+    department_id INT,                -- Foreign key reference (assuming departments table exists)
+    hire_date DATE DEFAULT CURRENT_DATE -- Default hire date to today
+);
 -- Step 6: View the data inserted into the employees table
 SELECT * FROM hr.employees;
 

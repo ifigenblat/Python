@@ -16,14 +16,14 @@ def get_db_conn():
     finally:
         conn.close()
 
-@app.get("/users")
+@app.get("/user")
 def get_users(db=Depends(get_db_conn)):
     with db.cursor() as cur:
         cur.execute("SELECT * FROM user_info.users;")
         users = cur.fetchall()
     return users
 
-@app.post("/users")
+@app.post("/user")
 def add_user(user: User, db=Depends(get_db_conn)):
     try:
         with db.cursor() as cur:
